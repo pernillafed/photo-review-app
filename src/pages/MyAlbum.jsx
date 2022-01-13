@@ -93,6 +93,7 @@ const MyAlbum = () => {
                         <>
                             <h1 className="display-2 text-center">{album.name}</h1>
                             <p className="album-description text-center">{album.description}</p>
+                            {!photos || photos.length === 0 && <Button className="my-2" variant="dark" onClick={() => setEditAlbum(true)}>Edit album</Button>}
                         </>
 
                     ) : <EditAlbum album={album} setEditAlbum={setEditAlbum} />}
